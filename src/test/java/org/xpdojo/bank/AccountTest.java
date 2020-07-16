@@ -28,6 +28,14 @@ public class AccountTest {
         assertThat(account.balance()).isEqualTo(20);
     }
 
+    public void transferBetweenAccounts(){
+        Account accountA = new Account();
+        Account accountB = new Account();
+        accountA.deposit(20);
+        accountB.deposit(10);
+        accountA.transfer(20, accountB);
+        assertThat(accountA.balance()).isEqualTo(0);
+    }
 }
 
 

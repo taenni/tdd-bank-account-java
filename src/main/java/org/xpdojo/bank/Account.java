@@ -14,4 +14,11 @@ public class Account {
     public void payment(int amount){
         balance -= amount;
     }
+
+    public void transfer(int amount, Account transferMoneyTo){
+        if (amount <= balance) {
+            balance -= amount;
+            transferMoneyTo.deposit(amount);
+        }
+    }
 }
