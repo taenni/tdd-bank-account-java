@@ -6,4 +6,8 @@ public class Account {
     public int balance(){
         return balance;
     }
+
+    public void deposit(int amount){
+        balance += amount;
+    }
 }
